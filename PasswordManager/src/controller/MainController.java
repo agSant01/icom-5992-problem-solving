@@ -39,7 +39,6 @@ public class MainController implements Initializable {
 
 	@FXML
 	void generatePassword(ActionEvent event) {
-
 		PasswordGenerator generator = new PasswordGenerator(
 				this.txtUsername.getText(), this.txtWebsite.getText());
 
@@ -51,6 +50,9 @@ public class MainController implements Initializable {
 		ArrayList<Password> passwords = passwordHandler.getPasswords();
 
 		this.passwordsTable.setItems(FXCollections.observableArrayList(passwords));
+		
+		this.txtUsername.clear();
+		this.txtWebsite.clear();
 	}
 
 	@Override
