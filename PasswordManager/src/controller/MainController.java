@@ -9,10 +9,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import models.Password;
+import password.PasswordGenerator;
+import password.PasswordHandler;
 
 public class MainController implements Initializable {
 	@FXML
-	private TableView<String> passwordsTable;
+	private TableView<Password> passwordsTable;
 
 	@FXML
 	private TableColumn<String, String> colPassword;
@@ -29,6 +32,8 @@ public class MainController implements Initializable {
 	@FXML
 	private TextField txtWebsite;
 
+	private PasswordHandler passwordHandler = new PasswordHandler();
+	
 	@FXML
 	void generatePassword(ActionEvent event) {
 		
@@ -36,6 +41,8 @@ public class MainController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		this.colPassword.setCellValueFactory("Password");
 		
 	}
 }
