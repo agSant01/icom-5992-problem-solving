@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="400.0" minWidth="400.0" prefHeight="400.0" prefWidth="528.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+   <children>
+      <TextField fx:id="txtUsername" layoutX="29.0" layoutY="43.0" promptText="Enter Username" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="43.0" />
+      <TextField fx:id="txtWebsite" layoutX="29.0" layoutY="85.0" promptText="Enter Website Name" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="85.0" />
+      <TableView fx:id="passwordsTable" layoutX="29.0" layoutY="132.0" prefHeight="251.0" prefWidth="472.0" AnchorPane.leftAnchor="29.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="132.0">
+        <columns>
+          <TableColumn fx:id="colWebsite" prefWidth="75.0" text="Website" />
+          <TableColumn fx:id="colUsername" prefWidth="75.0" text="Username" />
+            <TableColumn fx:id="colPassword" prefWidth="75.0" text="Password" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="252.0" layoutY="43.0" mnemonicParsing="false" onAction="#generatePassword" prefHeight="25.0" prefWidth="122.0" text="Generate" AnchorPane.leftAnchor="252.0" AnchorPane.topAnchor="43.0" />
+   </children>
+</AnchorPane>

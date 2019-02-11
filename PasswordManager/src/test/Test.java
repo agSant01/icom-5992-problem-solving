@@ -6,7 +6,7 @@
  */
 package test;
 
-import main.PasswordGenerator;
+import password.PasswordGenerator;;
 
 /**
  * @author Gabriel S. Santiago
