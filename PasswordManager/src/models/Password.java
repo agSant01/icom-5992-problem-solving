@@ -6,9 +6,9 @@ public class Password {
 	private String website;
 	
 	public Password(String password, String username, String website) {
-		this.password = password;
-		this.username = username;
-		this.website = website;
+		this.password = password.trim();
+		this.username = username.trim();
+		this.website = website.trim();
 	}
 
 	public String getPassword() {

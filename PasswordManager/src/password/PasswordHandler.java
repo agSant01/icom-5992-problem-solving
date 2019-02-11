@@ -34,7 +34,7 @@ public class PasswordHandler {
 				if (line.length() == 0)
 					break;
 				
-				data = line.split(",");
+				data = line.split("`~` ");
 				passwords.add(new Password(data[0], data[1], data[2]));
 				line = br.readLine();
 			}
@@ -52,8 +52,8 @@ public class PasswordHandler {
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter(file, true));
 			
-			String toWrite = password.getPassword() + "," 
-			+ password.getUsername() + ","
+			String toWrite = password.getPassword() + "`~` " 
+			+ password.getUsername() + "`~` "
 			+ password.getWebsite() + "\n";
 			
 			writer.write(toWrite);
